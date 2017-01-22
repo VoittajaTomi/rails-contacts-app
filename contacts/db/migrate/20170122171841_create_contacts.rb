@@ -3,7 +3,6 @@ class CreateContacts < ActiveRecord::Migration[5.0]
     create_table :contacts do |t|
       t.string :name
       t.string :details
-      t.integer :user_id
 
       t.timestamps
     end

@@ -26,6 +26,9 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
+    @contact.user = current_user
+    authorize! :create, @contact
+
     respond_to do |format|
       if @contact.save
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
@@ -40,6 +43,13 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
   def update
+
+    @contact = Contact.find(params[:id])
+    @contact.assign_attributes(contact_params)
+    authorize! :update, @contact
+
+
+
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
@@ -71,4 +81,5 @@ class ContactsController < ApplicationController
     def contact_params
       params.require(:contact).permit(:name, :details)
     end
+
 end
