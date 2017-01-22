@@ -19,6 +19,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1/edit
   def edit
+    @contact = Contact.find(params[:id])
+    authorize! :edit, @contact
   end
 
   # POST /contacts
@@ -64,7 +66,10 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+    @contact = Contact.find(params[:id])
+    authorize! :destroy, @contact
     @contact.destroy
+
     respond_to do |format|
       format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
       format.json { head :no_content }
