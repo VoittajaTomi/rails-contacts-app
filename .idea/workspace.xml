@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8970a6c6-e652-41c9-8f09-8e71bbdb64ce" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contacts/app/controllers/pages_controller.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rails-contacts-app.iml" afterPath="$PROJECT_DIR$/.idea/rails-contacts-app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/Gemfile" afterPath="$PROJECT_DIR$/contacts/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/Gemfile.lock" afterPath="$PROJECT_DIR$/contacts/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/contacts/app/controllers/contacts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/app/models/contact.rb" afterPath="$PROJECT_DIR$/contacts/app/models/contact.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/app/views/contacts/index.html.erb" afterPath="$PROJECT_DIR$/contacts/app/views/contacts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/config/application.rb" afterPath="$PROJECT_DIR$/contacts/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts/config/routes.rb" afterPath="$PROJECT_DIR$/contacts/config/routes.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +72,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contacts/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -515,12 +509,12 @@
       <option name="presentableId" value="Default" />
       <updated>1485104847283</updated>
       <workItem from="1485104850180" duration="45000" />
-      <workItem from="1485104896258" duration="19035000" />
+      <workItem from="1485104896258" duration="20800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19080000" />
+    <option name="totallyTimeSpent" value="20845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="25" width="1348" height="712" extended-state="0" />
@@ -686,8 +680,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contacts/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
           <folding />
         </state>
       </provider>
