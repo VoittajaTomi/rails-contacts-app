@@ -1,10 +1,17 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.accessible_by(current_ability)
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @contacts.as_csv }
+    end
   end
 
   # GET /contacts/1
@@ -15,21 +22,16 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+
   end
 
   # GET /contacts/1/edit
   def edit
-    @contact = Contact.find(params[:id])
-    authorize! :edit, @contact
   end
 
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params)
-
-    @contact.user = current_user
-    authorize! :create, @contact
 
     respond_to do |format|
       if @contact.save
@@ -46,12 +48,6 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1.json
   def update
 
-    @contact = Contact.find(params[:id])
-    @contact.assign_attributes(contact_params)
-    authorize! :update, @contact
-
-
-
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
@@ -66,8 +62,6 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
-    @contact = Contact.find(params[:id])
-    authorize! :destroy, @contact
     @contact.destroy
 
     respond_to do |format|
